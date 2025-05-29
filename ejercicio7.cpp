@@ -4,8 +4,15 @@ int factorial (int);
 int main () {
 	int m,n,c;
 	cin>>m>>n;
-	c=factorial(m)/(factorial(n)*factorial(m-n)) ;
-	cout<<c;
+	
+	if(m>n){
+		c=factorial(m)/(factorial(n)*factorial(m-n)) ;
+	    cout<<c<<endl;
+	    
+	}else{
+		cout<<"No es posible esta solucion. "<<endl;
+	}
+	
 	return 0;
 }
 int factorial(int n) {
