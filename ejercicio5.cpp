@@ -7,6 +7,15 @@ bool funcionPrimo(int n) {
     }
     return true;
 }
+void mostrarPrimosHasta(int n) {
+    cout << "Numeros primos menores o iguales a " << n << ": ";
+    for (int i = 2; i <= n; i++) {
+        if (esPrimo(i)) {
+            cout << i << " ";
+        }
+    }
+    cout << endl;
+}
 int main() {
     int numero;
     cout << "Ingrese un numero entero positivo: ";
@@ -17,5 +26,7 @@ int main() {
     } else {
         cout << numero << " NO es un numero primo." << endl;
     }
+    mostrarPrimosHasta(numero);
     return 0;
 }
+
